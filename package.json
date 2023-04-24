@@ -1,0 +1,11 @@
+{
+    "name": "com.hybelstudio.stat-system",
+    "displayName": "Stat System",
+    "version": "1.0.0",
+    "description": "A modular stat system where you can define stat types with base values.",
+    "unity": "2021.3",
+    "author": {
+        "name": "Brage Ingebrigtsen",
+        "email": "hybelstudio@gmail.com"
+    }
+}
