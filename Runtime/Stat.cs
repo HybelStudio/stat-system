@@ -91,7 +91,7 @@ namespace Hybel.StatSystem
         {
             _isDirty = true;
 
-            int index = _modifiers.BinarySearch(modifier, new ByPriority());
+            var index = _modifiers.BinarySearch(modifier, new ByOrder());
 
             if (index < 0)
                 index = ~index;
@@ -132,7 +132,7 @@ namespace Hybel.StatSystem
 
         public static implicit operator float(Stat stat) => stat.Value;
 
-        protected class ByPriority : IComparer<StatModifier>
+        protected class ByOrder : IComparer<StatModifier>
         {
             public int Compare(StatModifier x, StatModifier y)
             {
