@@ -34,7 +34,7 @@ namespace Hybel.StatSystem
         }
 
         public void AddModifier(IStatType statType, StatModifier modifier) => StatSystem.AddModifier(statType, modifier);
-        public void RemoveModifier(IStatType statType, StatModifier modifier) => StatSystem.RemoveModifier(statType, modifier);
+        public bool RemoveModifier(IStatType statType, StatModifier modifier) => StatSystem.RemoveModifier(statType, modifier);
         public IStat GetStat(IStatType statType) => StatSystem.GetStat(statType);
         public IStat GetStat(string statTypeName) => StatSystem.GetStat(statTypeName);
         public IObservableStat GetObservableStat(IStatType statType) => StatSystem.GetObservableStat(statType);

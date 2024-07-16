@@ -26,12 +26,12 @@ namespace Hybel.StatSystem
             stat.AddModifier(modifier);
         }
 
-        public void RemoveModifier(IStatType statType, StatModifier modifier)
+        public bool RemoveModifier(IStatType statType, StatModifier modifier)
         {
-            if (_statsDictionary.TryGetValue(statType, out IStat stat))
-                return;
+            if (!_statsDictionary.TryGetValue(statType, out IStat stat))
+                return false;
 
-            stat.RemoveModifier(modifier);
+            return stat.RemoveModifier(modifier);
         }
 
         public IStat GetStat(IStatType statType)
