@@ -27,7 +27,7 @@ namespace Hybel.StatSystem
         {
             foreach (KeyValuePair<IStatType, IStat> statsEntry in _statSystem.Stats)
 #if CLOGGER
-                this.LogDebug(statsEntry.Key.name, statsEntry.Value.Value);
+                this.LogDebug(statsEntry.Key.Name, statsEntry.Value.Value);
 #elif UNITY_EDITOR
                 Debug.Log($"{{ StatType: {statsEntry.Key.Name}, Value: {statsEntry.Value.Value} }}");
 #endif
